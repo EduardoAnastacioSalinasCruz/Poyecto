@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link href="https://fonts.cdnfonts.com/css/get-show" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/get-show" rel="stylesheet">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font-family:'Get Show', sans-serif;;
+            text-align: center;
+            margin:1px;
+        }
+
+        input {
+            width: 100px;
+            height: 50px;
+            font-size: 35px;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin: 24px;">
+        <nav class="nav nvbar-ligth"
+        style="background-color: rgb(207, 104, 255);"></nav>
+        <div class="container">
+            <a class="navbar-brand" href="index.html" style="font-family: 'Get Show', sans-serif;">Inicio</a>
+    <div class="collapse navbar-collapse" id="navbarNavDropwn">
+        <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDrownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-family: 'Get Show', sans-serif;">Unidad 1</a>
+                 <div class="dropdown-menu" aria-labelledby="navbarDrownMenuLink">
+                     <a class="dropdown-item" href="Perfil.html" style="font-family: 'Get Show', sans-serif;">Perfil</a><br>
+                     <a class="dropdown-item" href="Calculadora.html" style="font-family: 'Get Show', sans-serif;">Calculadora</a><br>
+                     <a class="dropdown-item" href="Tienda.html" style="font-family: 'Get Show', sans-serif;">Tienda</a>
+                  </div>
+                </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDrownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-family: 'Get Show', sans-serif;">Unidad 2</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDrownMenuLink">
+               <a class="dropdown-item" href="Tiendapedido1.html" style="font-family: 'Get Show', sans-serif;">Tienda pedido 1</a><br>
+               <a class="dropdown-item" href="json.html" style="font-family: 'Get Show', sans-serif;">no se</a><br>
+               <a class="dropdown-item" href="tiendapedido2.html" style="font-family: 'Get Show', sans-serif;">Tienda pedido 2</a>
+            </div>
+           </li>
+                <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDrownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-family: 'Get Show', sans-serif;">Unidad 3</a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropwnMenuLink">
+                         <a class="dropdown-item" href="basededatos.html" style="font-family: 'Get Show', sans-serif;">Base de datos</a><br>
+                         <a class="dropdown-item" href="peliculas.html" style="font-family: 'Get Show', sans-serif;">Peliculones</a><br>
+                       </div>
+                     </li>
+                   </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+<style>
+    .si{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: grid;
+        place-items: center;
+        background-image: linear-gradient(to right, rgb(74, 78, 154), rgb(249, 46, 53));
+        height: 100vh;
+        overflow: hidden;
+}
+.calc{
+    font-family: 'Get Show', sans-serif;
+    width: auto;
+    min-width: 300px;
+    max-width: 1000%;
+    height: auto;
+    min-height: 400px;
+    background-color: transparent;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    border: 5px double  rgb(31, 31, 101);
+}
+#ans{
+    width: 90%;
+    margin: 20px;
+    font-family: 'Get Show', sans-serif;
+    font-size: 200px;
+    color: black;
+    text-align: right;
+    border-radius: 100px;
+}
+</style>
+    <h2>Calculadora</h2>
+    <form name="calculator">
+        <input type="text" name="display" id="display" readonly>
+        <br>
+        <button type="button" onclick="calculator.display.value +='1'">1</button>
+        <button type="button" onclick="calculator.display.value +='2'">2</button>
+        <button type="button" onclick="calculator.display.value +='3'">3</button>
+        <button type="button" onclick="calculator.display.value +='+'">+</button>
+        <br>
+        <button type="button" onclick="calculator.display.value +='4'">4</button>
+        <button type="button" onclick="calculator.display.value +='5'">5</button>
+        <button type="button" onclick="calculator.display.value +='6'">6</button>
+        <button type="button" onclick="calculator.display.value +='-'">-</button>
+        <br>
+        <button type="button" onclick="calculator.display.value +='7'">7</button>
+        <button type="button" onclick="calculator.display.value +='8'">8</button>
+        <button type="button" onclick="calculator.display.value +='9'">9</button>
+        <button type="button" onclick="calculator.display.value +='*'">*</button>
+        <br>
+        <button type="button" onclick="calculator.display.value +='0'">0</button>
+        <button type="button" onclick="calculator.display.value +='.'">.</button>
+        <button type="button" onclick="calculator.display.value =''">C</button>
+        <button type="button" onclick="calculator.display.value +='/'">/</button>
+        <br>
+        <button type="button" onclick="calculator.display.value = eval(calculator.display.value)">=</button>
+    </form>
+    
+</body>
+</html>
