@@ -14,8 +14,19 @@ fetch(menu.json)
         menuContainer.appendChild(categoryTitle);
         const table=document.createElement('table');
         //que hace? Se crea un elemento table para cada categoria. Ademas, se prepara el encabezado (tablehead) con las columnas pertinentes. TablebOdy se inicializa vacio y se llenara con los elementos de la categoria
-        const tablehead = '<tr><th>Foto</th><th>Descripcion</th><th>Precios</th></tr>'
-        let TablebOdy='';
+        const tablehead = '<tr><th>Foto</th><th>Descripcion</th><th>Precios</th></tr>';
+        let tablebOdy='';
+        //Como funciona? para cada categoria en los datos, se realizan varios pasos:
+        //Crear un titulo para las categoria: se crea un elemento <h2> para el titulo de la categoria. Se establece su contenido de texto al nombre de la categoria (category.category), y luego se agrega al contenedor del menu.
+        //Crear una tabla para los elementos de esa categoria: se genera una tabal por cada categoria. Primero se define el encabezado de la tabla (<th>foto</th><th>Descripcion</th><th>Precio</th>).
 
+        category.items.forEach(item=> {
+            tablebOdy += <tr>
+                <td><img src= "${item.image}" alt="{item.name}"></img></td>
+                <td>${item.name} - ${item.description} </td>
+                <td>${item.price}</td>
+            </tr>
+        });
+        //Que hace? para cada item dentro de category.items, se concatena una nueva fila (<tr>) a tableBody. Esta fila contiene una celda para la imagen del elemento (suando el atributo src para la URL de la imagen y "alt" para el texto alternativo), tra celda para el nombre y la descripcion del elemento, y una tercera celda para el precio del elemento.
     });
-})
+});
