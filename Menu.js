@@ -1,4 +1,4 @@
-fetch(menu.json)
+fetch('menu.json')
 //Que hace esta linea? Esta linea inicia la carga del archivo menu.json, fetch es una funcion de Javascript que facilita la realizacion de solicitudes de red como obtener datos de un archivo o un endpoint de Api.
 //Como funciona? fetch devuelve, una promesa que, cuando se resuelve, te da acceso a la respuesta de la solicitud. Esta respuesta no es directamente los datos en formato JSON, si no un objeto de respuesta que incluye varios detalles sobre la respuesta misma.
 .then(Response=>Response.json())
@@ -28,5 +28,9 @@ fetch(menu.json)
             </tr>
         });
         //Que hace? para cada item dentro de category.items, se concatena una nueva fila (<tr>) a tableBody. Esta fila contiene una celda para la imagen del elemento (suando el atributo src para la URL de la imagen y "alt" para el texto alternativo), tra celda para el nombre y la descripcion del elemento, y una tercera celda para el precio del elemento.
+        table.innerHTML = tablehead + tablebOdy;
+        //Que hace? una vez completadas todas las filas de la tabla para los elementos de una categoria, se combina el encabezado de la tabla (tableHead) con el cuerpo de la tabla (tableBody) y se establece como el contenido HTML de la tabla. Finalmente, esta tabla se añade al contenedor del menu en la pagina web.
     });
 });
+//Poblar la tabla con los elementos: Para cada item dentro de una categoria, se crea una fila (<tr></tr>) con tres celdas (<td></td>): una para la imagen (con el elemento <img>), otra para el nombre y descripcion del item, y una ultima para el precio. Esto se hace concatenado la nueva fila a una variable tableBody.
+//Finalizar y mostrar la tabla: Una vez que todas las filas han sido agregadas a tableBody, se establece el contenido interno (innerHTML) de la tabla combinado el encabezado con el cuerpo. luego, esta tabla completa se agrega al contenedor del menu en el documento.
